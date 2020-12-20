@@ -44,6 +44,14 @@ body {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;s
+}
+
 /* Логотип */
 
 .logo {
@@ -74,7 +82,6 @@ footer .logo {
 .site-header .container {
   display: flex;
   align-items: center;
-  /* justify-content: flex-start; */
 }
 
 .site-nav {
@@ -109,6 +116,7 @@ footer .logo {
   padding-bottom: 32px;
 
   color: var(--nav-link-color);
+
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -116,8 +124,13 @@ footer .logo {
   letter-spacing: 0.02em;
 }
 
-.contact-link {
+.site-header .contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
+
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -159,9 +172,12 @@ footer .logo {
 }
 
 .footer-contact .link {
-  display: inline-block;
+  /* display: inline-block; */
   color: var(--footer-address-color);
   text-decoration: none;
+}
+
+.footer-contact .item + .item {
   margin-top: 9px;
 }
 
@@ -205,15 +221,14 @@ footer .logo {
   letter-spacing: 0.06em;
 }
 
+.hero-button:hover {
+  cursor: pointer;
+}
+
 /* Секция преимуществ */
 
 .section.features {
   padding-bottom: 106px;
-}
-
-/* !!!! Заголовок этой секции скрыть правильно (когда расскажут как)*/
-.features .section-title {
-  display: none;
 }
 
 .feature-items {
@@ -328,11 +343,6 @@ footer .logo {
 
 /* Секция Примеры работ*/
 
-/* !!!! Заголовок этой секции скрыть правильно (когда расскажут как)*/
-.works .section-title {
-  display: none;
-}
-
 .filter-container {
   display: flex;
   justify-content: center;
@@ -343,10 +353,12 @@ footer .logo {
 .filter-button {
   display: inline-block;
   padding: 6px 22px;
+
   background-color: var(--btn-bg-color);
   color: var(--title-text-color);
   border-radius: 4px;
   border: none;
+  outline: none;
 
   font-family: inherit;
   font-weight: 500;
@@ -375,7 +387,6 @@ footer .logo {
 
 .works-samples .item {
   flex-basis: calc((100% - 2 * 30px) / 3);
-  border: 1px solid var(--border-color);
 }
 
 .works-samples .item:not(:nth-child(3n)) {
@@ -398,6 +409,9 @@ footer .logo {
 
 .work-title {
   padding: 20px 24px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 
 .work-name {
