@@ -74,7 +74,7 @@ footer .logo {
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .site-nav {
@@ -337,6 +337,7 @@ footer .logo {
   display: flex;
   justify-content: center;
   margin-bottom: 34px;
+  /* border: none; */
 }
 
 .filter-button {
